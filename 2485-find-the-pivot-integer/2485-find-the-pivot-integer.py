@@ -2,16 +2,16 @@ class Solution:
     def pivotInteger(self, n: int) -> int:
         
         
-        f1 = [x for x in range(1, n+1)]
-
-        c = 1
-        while c<=n:
-
-
-            if sum(f1[c-1:]) == sum(f1[:c]):
-
-                return c
-
-            c+=1
-
+        totalsum = n * (n+1) //2 
+        
+        for i in range(1, n+1):
+            
+            leftsum = i * (i+1) //2
+            
+            rightsum = totalsum - ((i-1) * i//2)
+            
+            
+            if leftsum == rightsum:
+                return i
+            
         return -1
