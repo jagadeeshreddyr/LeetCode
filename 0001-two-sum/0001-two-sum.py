@@ -1,16 +1,30 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-        values=dict()
         
-        for i, elem in enumerate(nums):
+        n = len(nums)
+        
+        
+        i = 0
+        
+        j = 1
+        
+        
+        while j<n:
             
-            comp=target-elem 
-    
-            if comp in values:
-        
-                return [values[comp],i]
-        
-            values[elem]=i
             
-        return []
+            if nums[i]+nums[j] == target:
+                
+                return [i,j]
+            
+            j+=1
+            
+            
+            if j==n:
+                
+                i+=1
+                j= i+1
+                
+                
+                
+                
