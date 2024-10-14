@@ -1,8 +1,17 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        no=set(nums)
         
-        if len(nums)==len(no):
-            return False 
+        d = {}
         
-        return True
+        
+        for i in nums:
+            
+            if i not in d:
+                d[i]=1
+                
+            else:
+                d[i]+=1
+                return True
+            
+        return False
+        
