@@ -2,8 +2,7 @@ class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         
         
-        
-        in_0 = -1
+    
 
 
 
@@ -14,5 +13,5 @@ class Solution:
 
                 return i
             
-        return in_0
+        return -1
         
